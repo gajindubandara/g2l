@@ -283,13 +283,15 @@ a,
 
 .bg-gradient:before {
   position: absolute;
-  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijk1JSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjk1Ii8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  /*background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijk1JSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjk1Ii8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);*/
   /* FF3.6+ */
   /* Chrome,Safari4+ */
   /* Chrome10+,Safari5.1+ */
   /* Opera 11.10+ */
   /* IE10+ */
-  background: linear-gradient(to bottom, rgba(40, 115, 113, 0.57) 25%, rgba(115, 54, 31, 0.67) 75%);
+  /*background: linear-gradient(to bottom, rgba(40, 115, 113, 0.57) 25%, rgba(115, 54, 31, 0.67) 75%);*/
+
+  /*background: linear-gradient(to bottom, rgb(6 6 6 / 57%) 25%, rgb(99 76 129 / 67%) 75%);*/
   /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#000000',GradientType=0 );
   /* IE6-8 */
@@ -711,6 +713,8 @@ a,
   background: rgba(17, 17, 17, 0.8);
   color: #fff;
 }
+
+
 
 .btn.btn-d:hover,
 .btn.btn-d:focus {
@@ -1368,14 +1372,53 @@ General Styles - Owlcarousel
 /*--------------------------------------------------------------
 	Header
 --------------------------------------------------------------*/
+/*.home-section {*/
+/*  position: relative;*/
+/*  background-color: #fff;*/
+/*  background-repeat: no-repeat;*/
+/*  background-position: center center;*/
+/*  width: 100%;*/
+/*  z-index: 0;*/
+/*  background-size: cover;*/
+/*}*/
+
 .home-section {
   position: relative;
   background-color: #fff;
-  background-repeat: no-repeat;
-  background-position: center center;
   width: 100%;
   z-index: 0;
+  overflow: hidden; /* Ensure the video stays within the section */
+}
+
+#video-background {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  transform: translate(-50%, -50%);
   background-size: cover;
+  /*filter: brightness(0.7); !* Optional: add a filter for better text visibility *!*/
+  filter: grayscale(67%) brightness(0.5);
+}
+
+.logo-img{
+  width: 50%;
+  height: auto;
+}
+
+@media screen and (max-width: 500px) {
+  .logo-img {
+    width: 85%;
+  }
+}
+
+.titan-caption {
+  position: relative;
+  z-index: 1;
 }
 
 .titan-title-size-1 {
@@ -1525,20 +1568,20 @@ General Styles - Owlcarousel
 /* -------------------------------------------------------------
 Google map
 ------------------------------------------------------------- */
-#map-section {
-  position: relative;
-  height: 450px;
-  width: 100%;
-}
+/*#map-section {*/
+/*  position: relative;*/
+/*  height: 450px;*/
+/*  width: 100%;*/
+/*}*/
 
-#map {
-  height: 100%;
-  width: 100%;
-}
+/*#map {*/
+/*  height: 100%;*/
+/*  width: 100%;*/
+/*}*/
 
-#map img {
-  max-width: none;
-}
+/*#map img {*/
+/*  max-width: none;*/
+/*}*/
 
 /*--------------------------------------------------------------
 	Services & Features

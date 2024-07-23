@@ -848,3 +848,17 @@
 })(jQuery);
 
 
+// Function to update the copyright year
+function updateCopyrightYear() {
+    const currentYear = new Date().getFullYear(); // Get the current year
+    const copyrightElement = document.querySelector('.copyright');
+
+    if (copyrightElement) {
+        copyrightElement.innerHTML = `&copy; ${currentYear} <a href="index.html">TitaN</a>, All Rights Reserved`;
+    }
+}
+
+// Run the function when the DOM is fully loaded
+document.addEventListener('DOMContentLoaded', (event) => {
+    updateCopyrightYear();
+})
