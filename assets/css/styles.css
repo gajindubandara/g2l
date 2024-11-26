@@ -2,17 +2,6 @@ h2 {
     font-family: 'Aquire', sans-serif;
 }
 
-.hero-section {
-    height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url('../images/shop/banner1.jpg');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-}
 
 .hero-btn {
     color: #5f65ec;
@@ -125,108 +114,6 @@ h2 {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
 }
 
-#exclusive-product-container, #special-offers-container {
-    display: flex;
-    flex-wrap: wrap;
-    /*gap: 1rem; !* Space between cards *!*/
-    justify-content: center; /* Center cards in the row */
-}
-
-.product-card {
-    /*opacity: 0;*/
-    /*transition: opacity 0.5s ease-in-out;*/
-    transition: transform 0.3s ease;
-    cursor: pointer;
-    display: flex;
-    /*flex-direction: column; !* Ensure content inside the card stacks vertically *!*/
-    /*justify-content: space-between; !* Space out content evenly *!*/
-    height: 100%;
-}
-
-.product-card:hover {
-    transform: translateY(-10px);
-}
-
-.exclusive-badge {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: #FFD700;
-    color: black;
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-weight: bold;
-}
-
-.offer-badge {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: #FF4444;
-    color: white;
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-weight: bold;
-}
-
-.filter-button.active {
-    background-color: #212529;
-    color: white;
-}
-
-.price-strike {
-    text-decoration: line-through;
-    color: #999;
-}
-
-.filter-sidebar {
-    background: #f8f9fa;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-
-.exclusive-section {
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-    url('/api/placeholder/1920/1080');
-    background-size: cover;
-    background-position: center;
-    color: white;
-}
-
-.offers-section {
-    background: #FFE4E1;
-}
-
-/*!*no data card*!*/
-.nodata-card-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    margin: 0;
-    background-color: transparent; /* Optional background color */
-}
-
-.no-data-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 300px;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: transparent;
-    /*box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);*/
-    text-align: center;
-    color: #777;
-}
-
-.icon-container svg {
-    fill: none;
-    stroke: #ff6347;
-    margin-bottom: 15px;
-}
 
 p {
     font-size: 1rem;
