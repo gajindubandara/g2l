@@ -37,26 +37,26 @@ AOS.init({
 });
 
 //preloader
-function hidePreloader() {
-    window.addEventListener('load', () => {
-        setTimeout(() => {
-            const preloader = document.getElementById('preloader');
-
-            if (preloader) {
-                // Hide preloader
-                preloader.classList.add('fade-out');
-
-                // Remove preloader after 1 second (duration of the fade-out effect)
-                setTimeout(() => {
-                    preloader.style.display = 'none';
-                }, 1000);
-            }
-        }, 1000); // Delay before starting the fade-out
-    });
-}
-
-// Call the function to hide the preloader when the window is loaded
-hidePreloader();
+// function hidePreloader() {
+//     window.addEventListener('load', () => {
+//         setTimeout(() => {
+//             const preloader = document.getElementById('preloader');
+//
+//             if (preloader) {
+//                 // Hide preloader
+//                 preloader.classList.add('fade-out');
+//
+//                 // Remove preloader after 1 second (duration of the fade-out effect)
+//                 setTimeout(() => {
+//                     preloader.style.display = 'none';
+//                 }, 1000);
+//             }
+//         }, 1000); // Delay before starting the fade-out
+//     });
+// }
+//
+// // Call the function to hide the preloader when the window is loaded
+// hidePreloader();
 
 //Toggle menu mobile view
 function handleClickOutsideNavbar(e) {
