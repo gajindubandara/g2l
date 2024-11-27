@@ -77,3 +77,22 @@ function handleClickOutsideNavbar(e) {
 
 // Attach the event listener to the document
 document.addEventListener('click', handleClickOutsideNavbar);
+
+// Function to close the navbar menu on link click
+function closeNavbarOnLinkClick() {
+    const navbarCollapse = document.getElementById('navbarNav');
+    const navbarToggle = document.querySelector('.navbar-toggler');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            // Check if the navbar is currently visible
+            if (navbarCollapse.classList.contains('show')) {
+                navbarCollapse.classList.remove('show'); // Hide the navbar menu
+                navbarToggle.classList.add('collapsed'); // Update the toggle button
+            }
+        });
+    });
+}
+
+document.addEventListener('DOMContentLoaded', closeNavbarOnLinkClick);
