@@ -1,3 +1,6 @@
+//update date
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+
 // Updated navbar scroll behavior
 const navbar = document.querySelector('.navbar');
 let lastScroll = 0;
