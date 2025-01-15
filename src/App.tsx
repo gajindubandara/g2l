@@ -3,9 +3,7 @@ import { Navbar } from './components/Navbar';
 import { HeroSection } from './components/sections/HeroSection.tsx';
 import { ServiceSection } from './components/sections/ServiceSection.tsx';
 import { WebProjectSection } from './components/sections/WebProjectSection.tsx';
-import {BrandingProjectSection} from "./components/sections/BrandingProjectSection.tsx";
 import {ParticleBackground} from "./components/animations/ParticleBackground.tsx";
-import {MusicProjectSection} from "./components/sections/MusicProjectSection.tsx";
 import { ContactSection } from './components/sections/ContactSection.tsx';
 import { Footer } from './components/Footer';
 import AOS from 'aos';
@@ -24,8 +22,8 @@ const App: React.FC = () => {
             <HeroSection />
             <ServiceSection />
             <WebProjectSection />
-            <MusicProjectSection/>
-            <BrandingProjectSection/>
+            {/*<MusicProjectSection/>*/}
+            {/*<BrandingProjectSection/>*/}
             <ContactSection />
             <Footer />
         </>

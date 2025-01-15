@@ -82,8 +82,8 @@ export const Navbar: React.FC = () => {
         { text: 'Home', href: '#home' },
         { text: 'Services', href: '#services' },
         { text: 'Websites', href: '#projects' },
-        { text: 'Music', href: '#music' },
-        { text: 'Branding', href: '#branding' },
+        // { text: 'Music', href: '#music' },
+        // { text: 'Branding', href: '#branding' },
         { text: 'Contact Us', href: '#contact' }
     ];
 
