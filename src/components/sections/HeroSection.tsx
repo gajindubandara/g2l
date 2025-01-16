@@ -1,6 +1,19 @@
 import React from 'react';
+import {useNavigate} from "react-router-dom";
 
 export const HeroSection: React.FC = () => {
+    const navigate = useNavigate();
+
+    const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+        e.preventDefault();
+        const sectionId = href.replace(/^#/, '');
+        const element = document.getElementById(sectionId);
+
+        if (element) {
+            navigate(`#${sectionId}`);
+            element.scrollIntoView({behavior: 'smooth'});
+        }
+    };
     return (
         <section className="home-section home-full-height  bg-gradient" id="home" style={{background: "transparent"}}>
             <div className="titan-caption">
@@ -12,7 +25,11 @@ export const HeroSection: React.FC = () => {
                             alt="Logo"
                         />
                     </div>
-                    <a className="section-scroll btn hero-btn btn-lg" href="#services">Learn More</a>
+                    <a
+                        className="section-scroll btn hero-btn btn-lg"
+                        href="#services"
+                        onClick={(e) => handleLinkClick(e, '#services')}
+                    >Learn More</a>
                 </div>
             </div>
         </section>

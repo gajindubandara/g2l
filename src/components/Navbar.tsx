@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
+import {useNavigate} from "react-router-dom";
 
 export const Navbar: React.FC = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -7,6 +8,7 @@ export const Navbar: React.FC = () => {
     const [isAnimatingItems, setIsAnimatingItems] = useState(false);
     const menuRef = useRef<HTMLDivElement | null>(null);
     const toggleButtonRef = useRef<HTMLButtonElement | null>(null);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const updateNavbar = () => {
@@ -74,29 +76,35 @@ export const Navbar: React.FC = () => {
         }, 200);
     };
 
-    const handleLinkClick = () => {
-        handleMenuClose();
+    const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+        e.preventDefault();
+        const sectionId = href.replace(/^#/, '');
+        const element = document.getElementById(sectionId);
+
+        if (element) {
+            navigate(`#${sectionId}`);
+            element.scrollIntoView({ behavior: 'smooth' });
+            handleMenuClose();
+        }
     };
 
     const navItems = [
         { text: 'Home', href: '#home' },
         { text: 'Services', href: '#services' },
         { text: 'Websites', href: '#projects' },
-        // { text: 'Music', href: '#music' },
-        // { text: 'Branding', href: '#branding' },
         { text: 'Contact Us', href: '#contact' }
     ];
+
 
     return (
         <nav className={`navbar navbar-expand-lg fixed-top ${isTransparent ? 'transparent' : ''} ${isScrolled ? 'scrolled' : ''}`}>
             <div className="container">
-                <a className="navbar-brand fw-bold" href="#">
+                <a className="navbar-brand fw-bold" href="#home" onClick={(e) => handleLinkClick(e, '#home')}>
                     <img
                         src='https://res.cloudinary.com/dkznriytt/image/upload/c_fill,w_200/v1721718424/g2-site/a7admjkajwxxs72k69m2.png'
                         alt="G2 Labs Icon"
                         className="brand-icon"
                     />
-                    {/*<span style={{marginBottom:"2px"}}>G2 Labs</span> */}
                 </a>
                 <button
                     ref={toggleButtonRef}
@@ -120,14 +128,14 @@ export const Navbar: React.FC = () => {
                                 style={{ '--item-index': index } as React.CSSProperties}
                             >
                                 <a
-                                    className="nav-link"
-                                    href={item.href}
-                                    onClick={handleLinkClick}
+                                className="nav-link"
+                                href={item.href}
+                                onClick={(e) => handleLinkClick(e, item.href)}
                                 >
-                                    {item.text}
-                                </a>
+                                {item.text}
+                            </a>
                             </li>
-                        ))}
+                            ))}
                     </ul>
                 </div>
             </div>

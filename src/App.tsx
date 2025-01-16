@@ -1,12 +1,11 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import { HeroSection } from './components/sections/HeroSection';
 import { ServiceSection } from './components/sections/ServiceSection';
 import { WebProjectSection } from './components/sections/WebProjectSection';
 import { ParticleBackground } from "./components/animations/ParticleBackground";
 import { ContactSection } from './components/sections/ContactSection';
-
 import { Footer } from './components/Footer';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
