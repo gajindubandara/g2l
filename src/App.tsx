@@ -1,14 +1,31 @@
 import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
-import { HeroSection } from './components/sections/HeroSection.tsx';
-import { ServiceSection } from './components/sections/ServiceSection.tsx';
-import { WebProjectSection } from './components/sections/WebProjectSection.tsx';
-import {ParticleBackground} from "./components/animations/ParticleBackground.tsx";
-import { ContactSection } from './components/sections/ContactSection.tsx';
+import { HeroSection } from './components/sections/HeroSection';
+import { ServiceSection } from './components/sections/ServiceSection';
+import { WebProjectSection } from './components/sections/WebProjectSection';
+import { ParticleBackground } from "./components/animations/ParticleBackground";
+import { ContactSection } from './components/sections/ContactSection';
+
 import { Footer } from './components/Footer';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './index.css';
+import {NotFoundPage} from "./components/NotFoundPage.tsx";
+
+const MainContent: React.FC = () => {
+    return (
+        <>
+            <ParticleBackground />
+            <Navbar />
+            <HeroSection />
+            <ServiceSection />
+            <WebProjectSection />
+            <ContactSection />
+            <Footer />
+        </>
+    );
+};
 
 const App: React.FC = () => {
     useEffect(() => {
@@ -16,17 +33,12 @@ const App: React.FC = () => {
     }, []);
 
     return (
-        <>
-            <ParticleBackground/>
-            <Navbar />
-            <HeroSection />
-            <ServiceSection />
-            <WebProjectSection />
-            {/*<MusicProjectSection/>*/}
-            {/*<BrandingProjectSection/>*/}
-            <ContactSection />
-            <Footer />
-        </>
+        <Router>
+            <Routes>
+                <Route path="/" element={<MainContent />} />
+                <Route path="*" element={<NotFoundPage />} />
+            </Routes>
+        </Router>
     );
 };
 
