@@ -28,7 +28,10 @@ const MainContent: React.FC = () => {
 
 const App: React.FC = () => {
     useEffect(() => {
-        AOS.init();
+        AOS.init({
+            duration: 1000, // Customize the animation duration
+            once: true, // Make sure the animation only runs once
+        });
     }, []);
 
     return (

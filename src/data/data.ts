@@ -15,14 +15,20 @@ export const services = [
         description: "Custom software solutions designed to meet your unique business needs with precision."
     },
     {
-        icon: "bi-palette-fill",
-        title: "Logo Design & Branding",
-        description: "Building unique brand identities through creative logo designs and strategic branding solutions."
+        icon: "bi-cloud",
+        title: "IoT Solutions",
+        description: "Implementing IoT solutions to address specific problems and fulfill customer requirements with cutting-edge technology."
+    },
+
+    {
+        icon: "bi-lightbulb",
+        title: "Marketing & Team Development",
+        description: "Innovative marketing strategies, team training, and performance tracking for business success."
     },
     {
-        icon: "bi-brush",
-        title: "Graphic Design",
-        description: "Eye-catching graphic designs for marketing materials, advertisements, and digital media."
+        icon: "bi-palette-fill",
+        title: "Design & Branding",
+        description: "Creating unique brand identities and eye-catching graphic designs for marketing, advertisements, and digital media."
     },
     {
         icon: "bi-megaphone",
@@ -33,8 +39,10 @@ export const services = [
         icon: "bi-music-note-beamed",
         title: "Audio Engineering & Music Production",
         description: "Professional audio engineering and music production services for your creative projects."
-    }
+    },
+
 ];
+
 
 // use 4:3 ration images for web projects
 export const webProjects = [

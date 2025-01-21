@@ -36,7 +36,7 @@ export const ServiceSection: React.FC = () => {
                     <p className="lead text-description">Innovative solutions tailored to your unique needs</p>
                 </div>
 
-                <div className="row">
+                <div className="row justify-content-center">
                     {services.map((service, index) => (
                         <ServiceCard
                             key={index}
