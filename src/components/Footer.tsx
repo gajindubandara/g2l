@@ -8,15 +8,19 @@ export const Footer: React.FC = () => {
                     <div className="row g-4">
                         <div className="col-md-8">
                             <h4>About Us</h4>
-                            <p>We are a creative digital and technology solutions company specializing in tailored software development,
-                                website creation, branding, graphic design, social media marketing, and audio engineering.</p>
+                            <p>We are a creative digital and technology solutions company specializing in website
+                                development,
+                                design and branding, tailored software solutions, social media marketing, marketing and
+                                team development,
+                                IoT solutions, and audio engineering.</p>
                         </div>
+
                         <div className="col-md-4">
                             <div className="row">
                                 <div className="col-6">
                                     <h4 className="mb-4">Get in Touch</h4>
                                     <div className="contact-info-item">
-                                        <i className="bi bi-phone"><strong> Phone / WhatsApp</strong></i>
+                                    <i className="bi bi-phone"><strong> Phone / WhatsApp</strong></i>
                                         <div>
                                             <p className="text-muted mb-0">
                                                 <a href="tel:+94713886535" className="text-decoration-none">+94 (71) 388-6535</a>
